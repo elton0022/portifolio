@@ -1,0 +1,35 @@
+.information{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.information-name{
+    margin-top: 19px;
+    text-align: center;
+}
+
+.information-value{
+    margin-top: 5px;
+    text-align: center;
+    color: var(--gray);
+    font-size: 16px;
+}
+
+
+.circle{
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    background-color: var(--gray-400);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img{
+    width: 27px;
+    height: 27px;
+}

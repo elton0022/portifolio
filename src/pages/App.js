@@ -1,9 +1,26 @@
 import './App.css';
+import React, { useState, useEffect } from 'react';
+
+import { Information } from "../components/information-personal";
 
 import file from "../files/example.pdf";
 import iconPerson from "../images/icon-person.png";
+import { informations } from "../constants/information-personal";
+
+import ApiGitHub from "../config/apiGitHub";
 
 function App() {
+  const [repositores, setRepositores] = useState([]);
+
+  useEffect(() => {
+    async function loadRepos() {
+      const response = await ApiGitHub.get('users/elton0022/repos');
+      setRepositores(response.data);
+    }
+    loadRepos();
+  }, []);
+
+
   return (
     <div className="app">
 
@@ -20,8 +37,7 @@ function App() {
       </header>
 
       <div className="app-profile">
-
-        <div className="app-presentation">
+        <div className="presentation">
           <div className="presentation-name">
             <strong>Olá, eu sou o</strong>
             <br />
@@ -35,11 +51,31 @@ function App() {
             <a className="buttom action-contact" href="mailto:eltonrodrigues0022.er@gmail.com" target="_blank"> Entrar em contato</a>
           </div>
         </div>
+        <img className="presentation-icon" src={iconPerson} alt="icon" />
+      </div>
 
-        <img className="presentation-icon" src={iconPerson} alt="icon"/>
+      <div className="app-about_me">
+        <div className="presentation-name">
+          <strong>Sobre mim</strong>
+        </div>
+        <p className="about_me-text">
+          Meu nome é Elton Rodrigues e atualmente trabalho como desenvolvedor Full Stack. Minha carreira se
+          iniciou em 2019 quando entrei em um projeto do estágio do curso de Ciência da Computação, onde comecei
+          como desenvolvedor front-end Angular. Desde então estudei a aperfeiçoei meus conhecimentos em stacks baseadas em javascript e typescript.
+        </p>
+      </div>
 
+      <div className="app-informations">
+        {informations.map((info) => <Information key={info.name} name={info.name} img={info.img} value={info.value} />)}
+      </div>
+
+      <div className="app-projects">
+        <div className="presentation-name">
+          <strong>Projetos</strong>
+        </div>
 
       </div>
+
     </div>
   );
 }
