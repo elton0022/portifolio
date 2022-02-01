@@ -1,0 +1,94 @@
+
+/**
+* Estilo inicial
+*/
+.app {
+    padding: 35px 105px 0px 105px;
+}
+
+/**
+* Cabeçalho
+*/
+.app-header{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-title{
+    font-size: 26px;
+}
+
+.header-nav{
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header-nav a{
+    text-decoration: none;
+    color: var(--white);
+}
+
+/**
+* Apresentação
+*/
+
+.app-profile{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.app-presentation{
+    width: 350px;
+    height: 400px;
+    margin-top: 143px;
+}
+
+.presentation-name{
+    font-size: 36px;
+    line-height: 47px;
+    margin-bottom: 18px;
+}
+
+.presentation-stack{
+    font-size: 18px;
+    line-height: 23px;
+    color: var(--gray);
+    margin-bottom: 18px;
+
+}
+
+.presentation-actions{
+    margin-top: 35px;
+}
+
+.buttom{
+    width: 143px;
+    height: 43px;
+    text-decoration: none;
+    text-align: center;
+    padding: 12px;
+    font-size: 14px;
+}
+
+.action-cv{
+    background-color: var(--green-light);
+    color: var(--dark);
+    margin-right: 10px;
+}
+
+.action-contact{
+    border: 1px solid var(--gray-200);
+    color: var(--white);
+}
+
+.presentation-icon{
+    width: 300px;
+    height: 300px;
+}
