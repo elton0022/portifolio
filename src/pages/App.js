@@ -2,6 +2,7 @@ import './App.css';
 import React, { useState, useEffect } from 'react';
 
 import { Information } from "../components/information-personal";
+import { Project } from "../components/project";
 
 import file from "../files/example.pdf";
 import iconPerson from "../images/icon-person.png";
@@ -10,7 +11,7 @@ import { informations } from "../constants/information-personal";
 import ApiGitHub from "../config/apiGitHub";
 
 function App() {
-  const [repositores, setRepositores] = useState([]);
+  const [repositories, setRepositores] = useState([]);
 
   useEffect(() => {
     async function loadRepos() {
@@ -48,7 +49,7 @@ function App() {
 
           <div className="presentation-actions">
             <a className="buttom action-cv" href={file} target="_blank"> Download CV</a>
-            <a className="buttom action-contact" href="mailto:eltonrodrigues0022.er@gmail.com" target="_blank"> Entrar em contato</a>
+            <a className="buttom action-contact" href="mailto:eltonrodrigues0022.er@gmail.com" target="_blank">Entrar em contato</a>
           </div>
         </div>
         <img className="presentation-icon" src={iconPerson} alt="icon" />
@@ -73,7 +74,9 @@ function App() {
         <div className="presentation-name">
           <strong>Projetos</strong>
         </div>
-
+        <div className="repositories">
+          {repositories.map((repo) => <Project key={repo.id} language={repo.language} name={repo.name} description={repo.description} />)}
+        </div>
       </div>
 
     </div>

@@ -132,7 +132,14 @@
 .app-projects{
     width: 100%;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin-top: 85px;
+}
+
+.repositories{
+    display: grid;
+    grid-template-columns: 350px 350px 350px;
+    grid-gap: 45px;
 }
