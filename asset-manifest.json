@@ -1,15 +1,20 @@
 {
   "files": {
-    "main.css": "/portifolio/static/css/main.b04028dd.css",
-    "main.js": "/portifolio/static/js/main.e24f0d41.js",
+    "main.css": "/portifolio/static/css/main.cf0538eb.css",
+    "main.js": "/portifolio/static/js/main.e6867268.js",
     "static/media/example.pdf": "/portifolio/static/media/example.cff7b715c5a58c8c6a75.pdf",
     "static/media/icon-person.png": "/portifolio/static/media/icon-person.68a230f5eaad3c335c65.png",
+    "static/media/html.svg": "/portifolio/static/media/html.a34c3afa412328848c38.svg",
+    "static/media/java.svg": "/portifolio/static/media/java.7ebfcf8d356177773c4d.svg",
+    "static/media/javascript.svg": "/portifolio/static/media/javascript.a60cc7a1dfa50f5f6745.svg",
+    "static/media/typescript.svg": "/portifolio/static/media/typescript.9ddd3af54d792cac32b8.svg",
+    "static/media/css.svg": "/portifolio/static/media/css.131a48311fa11b095fd1.svg",
     "index.html": "/portifolio/index.html",
-    "main.b04028dd.css.map": "/portifolio/static/css/main.b04028dd.css.map",
-    "main.e24f0d41.js.map": "/portifolio/static/js/main.e24f0d41.js.map"
+    "main.cf0538eb.css.map": "/portifolio/static/css/main.cf0538eb.css.map",
+    "main.e6867268.js.map": "/portifolio/static/js/main.e6867268.js.map"
   },
   "entrypoints": [
-    "static/css/main.b04028dd.css",
-    "static/js/main.e24f0d41.js"
+    "static/css/main.cf0538eb.css",
+    "static/js/main.e6867268.js"
   ]
 }
