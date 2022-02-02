@@ -3,7 +3,7 @@
 * Estilo inicial
 */
 .app {
-    padding: 35px 105px 0px 105px;
+    margin: 35px 105px 0px 105px;
 }
 
 /**
@@ -142,4 +142,56 @@
     display: grid;
     grid-template-columns: 350px 350px 350px;
     grid-gap: 45px;
+}
+
+@media (max-width: 1200px)
+{
+    .app {
+        margin: 35px 25px 0px 25px;
+    }
+    .repositories{
+        grid-template-columns: 350px 350px;
+    }
+}
+
+@media (max-width: 790px)
+{
+    .repositories{
+        grid-template-columns: 320px;
+    }
+}
+
+@media (max-width: 990px)
+{
+    .app-informations{
+        flex-direction: column;
+    }
+    .presentation-icon{
+        display: none;
+    }
+}
+
+@media (max-width: 900px)
+{
+    .header-nav{
+        display: none;
+    }
+}
+
+@media (max-width: 500px)
+{
+    .presentation-actions{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .buttom{
+        width: 190px;
+        height: 20px;
+    }
+    
+    .action-contact{
+        margin-top: 10px;
+    }
+    
 }
