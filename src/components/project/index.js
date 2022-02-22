@@ -16,7 +16,7 @@ class Project extends React.Component {
           </span>
         </div>
         <p className="repo-description">
-        {this.props.description}
+          {this.props.description}
         </p>
       </div>
     )
