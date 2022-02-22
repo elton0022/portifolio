@@ -10,7 +10,7 @@ class Project extends React.Component {
     return (
       <div className="project">
         <div className="logo">
-          <img className="img" src={require(`../../images/svg/${this.props?.language ? this.props.language.toLowerCase() : 'css'}.svg`)} alt="icon" />
+          <img className="img" src={require(`../../images/svg/${this.props?.language ? this.props.language.toLowerCase() : 'css.svg'}.svg`)} alt="icon" />
           <span className="repo-name">
             {this.props.name}
           </span>
