@@ -30,8 +30,8 @@ function App() {
           Portifólio
         </strong>
         <div className="header-nav">
-          <a href="">Sobre mim</a>
-          <a href="">Projetos</a>
+          <a href="#about_me">Sobre mim</a>
+          <a href="#projects">Projetos</a>
           <a href="">Serviços</a>
           <a href="">Minhas skills</a>
         </div>
@@ -55,7 +55,7 @@ function App() {
         <img className="presentation-icon" src={iconPerson} alt="icon" />
       </div>
 
-      <div className="app-about_me">
+      <div id="about_me" className="app-about_me">
         <div className="presentation-name">
           <strong>Sobre mim</strong>
         </div>
@@ -70,7 +70,7 @@ function App() {
         {informations.map((info) => <Information key={info.name} name={info.name} img={info.img} value={info.value} />)}
       </div>
 
-      <div className="app-projects">
+      <div id="projects" className="app-projects">
         <div className="presentation-name">
           <strong>Projetos</strong>
         </div>
