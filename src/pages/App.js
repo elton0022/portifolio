@@ -1,17 +1,23 @@
 import './App.css';
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
+
+
+import { informations } from "../constants/information-personal";
+import { services } from "../constants/services";
+import { skills } from "../constants/skills";
 
 import { Information } from "../components/information-personal";
 import { Project } from "../components/project";
+import { Service } from "../components/service";
+import { Skill } from "../components/skill";
 
 import file from "../files/example.pdf";
 import iconPerson from "../images/icon-person.png";
-import { informations } from "../constants/information-personal";
 
 import ApiGitHub from "../config/apiGitHub";
 
 function App() {
-  const [repositories, setRepositores] = useState([]);
+  const [repositories, setRepositores] = React.useState([]);
 
   useEffect(() => {
     async function loadRepos() {
@@ -32,8 +38,8 @@ function App() {
         <div className="header-nav">
           <a href="#about_me">Sobre mim</a>
           <a href="#projects">Projetos</a>
-          <a href="">Serviços</a>
-          <a href="">Minhas skills</a>
+          <a href="#services">Serviços</a>
+          <a href="#skills">Minhas skills</a>
         </div>
       </header>
 
@@ -48,8 +54,8 @@ function App() {
           <span className="presentation-stack">Desenvolvedor Full Stack</span>
 
           <div className="presentation-actions">
-            <a className="buttom action-cv" href={file} target="_blank"> Download CV</a>
-            <a className="buttom action-contact" href="mailto:eltonrodrigues0022.er@gmail.com" target="_blank">Entrar em contato</a>
+            <a className="buttom action-cv" href={file} target="_blank" rel="noreferrer"> Download CV</a>
+            <a className="buttom action-contact" href="mailto:eltonrodrigues0022.er@gmail.com" rel="noreferrer" target="_blank">Entrar em contato</a>
           </div>
         </div>
         <img className="presentation-icon" src={iconPerson} alt="icon" />
@@ -67,7 +73,7 @@ function App() {
       </div>
 
       <div className="app-informations">
-        {informations.map((info) => <Information key={info.name} name={info.name} img={info.img} value={info.value} />)}
+        {informations.map((info, index) => <Information key={index} name={info.name} img={info.img} value={info.value} />)}
       </div>
 
       <div id="projects" className="app-projects">
@@ -75,8 +81,37 @@ function App() {
           <strong>Projetos</strong>
         </div>
         <div className="repositories">
-          {repositories.map((repo) => <Project key={repo.id} language={repo.language} name={repo.name} description={repo.description} />)}
+          {repositories.map((repo, index) =>
+            <Project key={index}
+              language={repo.language}
+              name={repo.name}
+              description={repo.description}
+              url={repo.svn_url}
+            />)}
         </div>
+      </div>
+
+      <div id="services" className="app-services">
+        <div className="presentation-name">
+          <strong>Serviços</strong>
+        </div>
+        <div className="services">
+          {services.map((service, index) =>
+            <Service key={index} name={service.name} img={service.img} />
+          )}
+        </div>
+      </div>
+
+      <div id="skills" className="app-skills">
+        <div className="presentation-name">
+          <strong>Minhas Skills</strong>
+        </div>
+        <div className="skills">
+          {skills.map((skill, index) =>
+            <Skill key={index} img={skill.img} />
+          )}
+        </div>
+
       </div>
 
     </div>
