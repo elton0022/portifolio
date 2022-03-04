@@ -11,7 +11,7 @@ import { Project } from "../components/project";
 import { Service } from "../components/service";
 import { Skill } from "../components/skill";
 
-import file from "../files/example.pdf";
+import file from "../files/cv.pdf";
 import iconPerson from "../images/icon-person.png";
 
 import ApiGitHub from "../config/apiGitHub";
@@ -113,6 +113,10 @@ function App() {
         </div>
 
       </div>
+
+      <footer>
+          Orgulhosamente feito por <span className="my-name" >&nbsp;Elton Rodrigues </span>
+      </footer>
 
     </div>
   );

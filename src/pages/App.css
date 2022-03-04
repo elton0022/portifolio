@@ -178,6 +178,25 @@
     margin-bottom: 200px;
 }
 
+footer{
+    position: absolute;
+    bottom: -1;
+    left: 0;
+    right: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100% !important;
+    height: 60px;
+    background-color: var(--gray-400);
+    z-index: 10;
+}
+
+footer .my-name{
+    color: var(--green-light);
+}
+
 @media (max-width: 1200px)
 {
     .app {
