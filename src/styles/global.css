@@ -8,11 +8,25 @@ body {
 }
 
 
+body::-webkit-scrollbar {
+  width: 6px;
+  /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--green-light);
+  border-radius: 20px;
+}
+
+
 :root {
   --green-light: #00df5e;
   --gray: #828282;
   --gray-200: #333333;
   --gray-400: #212121;
   --white: #f9f9f9;
-  --dark: #171717
+  --dark: #171717;
+
+  --animate-duration: 2500ms;
+  --animate-delay: 3.5s;
 }
