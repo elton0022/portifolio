@@ -43,7 +43,7 @@ function App() {
         </div>
       </header>
 
-      <div className="app-profile">
+      <div className="app-profile animate__animated animate__fadeIn">
         <div className="presentation">
           <div className="presentation-name">
             <strong>Olá, eu sou o</strong>
@@ -61,7 +61,7 @@ function App() {
         <img className="presentation-icon" src={iconPerson} alt="icon" />
       </div>
 
-      <div id="about_me" className="app-about_me">
+      <div id="about_me" className="app-about_me animate__animated animate__bounce animate__fadeInUp">
         <div className="presentation-name">
           <strong>Sobre mim</strong>
         </div>
@@ -72,11 +72,11 @@ function App() {
         </p>
       </div>
 
-      <div className="app-informations">
+      <div className="app-informations animate__animated animate__bounce animate__fadeInUp">
         {informations.map((info, index) => <Information key={index} name={info.name} img={info.img} value={info.value} />)}
       </div>
 
-      <div id="projects" className="app-projects">
+      <div id="projects" className="app-projects animate__animated animate__bounce animate__fadeInUp">
         <div className="presentation-name">
           <strong>Projetos</strong>
         </div>
@@ -91,7 +91,7 @@ function App() {
         </div>
       </div>
 
-      <div id="services" className="app-services">
+      <div id="services" className="app-services animate__animated animate__bounce animate__fadeInUp">
         <div className="presentation-name">
           <strong>Serviços</strong>
         </div>
@@ -102,7 +102,7 @@ function App() {
         </div>
       </div>
 
-      <div id="skills" className="app-skills">
+      <div id="skills" className="app-skills animate__animated animate__bounce animate__fadeInUp">
         <div className="presentation-name">
           <strong>Minhas Skills</strong>
         </div>
